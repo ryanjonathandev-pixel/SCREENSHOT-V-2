@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: url('backroom.jpe');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+#escuro {
+    position: fixed;
+    inset: 0;
+    background: black;
+    pointer-events: none;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  position: absolute;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+img:hover {
+  opacity: 0.5;
+}
+
+.seguidor {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #ff5722;
+  border-radius: 50%;
+  pointer-events: none; /* Evita que a div interfira em cliques de outros elementos */
+  transform: translate(-50%, -50%); /* Centraliza a div exatamente no cursor */
+}
+
+#escuro {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
