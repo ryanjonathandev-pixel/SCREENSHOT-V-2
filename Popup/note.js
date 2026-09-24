@@ -3,7 +3,7 @@ function abrirPopup() {
     document.body.style.overflow = "hidden";
     document.body.insertAdjacentHTML("beforeend", `
 <section class="backgroundBlur" id="backgroundBlur">
-   <div #tremor>
+   <div id="tremor">
     <div id="popup" class="popup">
         <img
             src="Popup/personagem.png"
@@ -74,7 +74,7 @@ function abrirPopup() {
     overflow: visible;
     transform-origin: center;
 
-    animation: entradaGlitch 0.15s steps(1, end) forwards;
+    animation: entradaGlitch 0.15s steps(1, end) 0.5 forwards;
 }
 
 @keyframes entradaGlitch {
@@ -83,36 +83,42 @@ function abrirPopup() {
     0% {
         transform: translate(-50%, -50%)
                    scaleX(1.15) scaleY(0.5);
+        opacity: 100%;
     }
 
     /* 2 — comprime e estica para os lados */
     20% {
         transform: translate(-50%, -50%)
                    scaleX(0.75) scaleY(1.15);
+        opacity: 100%;
     }
 
     /* 3 — fica extremamente fino horizontalmente */
     40% {
         transform: translate(-50%, -50%)
                    scaleX(0.10) scaleY(2);
+        opacity: 100%;
     }
 
     /* 4 — volta rapidamente, passando um pouco do tamanho */
     60% {
         transform: translate(-50%, -50%)
                    scaleX(1.12) scaleY(0.88);
+        opacity: 100%;
     }
 
     /* 5 — pequena deformação de retorno */
     80% {
         transform: translate(-50%, -50%)
                    scaleX(0.96) scaleY(1.04);
+        opacity: 100%;
     }
 
     /* 6 — normal */
     100% {
         transform: translate(-50%, -50%)
                    scaleX(1) scaleY(1);
+        opacity: 100%;
     }
 }
 
