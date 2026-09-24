@@ -250,7 +250,7 @@ function abrirPopup() {
 
     transform: translate(-50%, -50%);
 
-    animation: tremorGlitch 3.5s steps(1) infinite;
+    animation: tremorGlitch 3.5s steps(1) 0.65s infinite;
 }
 
 @keyframes tremorGlitch {
