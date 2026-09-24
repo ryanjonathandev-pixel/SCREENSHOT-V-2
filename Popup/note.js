@@ -1,7 +1,9 @@
 function abrirPopup() {
     fatalError()
+    document.body.style.overflow = "hidden";
     document.body.insertAdjacentHTML("beforeend", `
 <section class="backgroundBlur" id="backgroundBlur">
+   <div #tremor>
     <div id="popup" class="popup">
         <img
             src="Popup/personagem.png"
@@ -27,6 +29,7 @@ function abrirPopup() {
     </div>
 
   </div>
+ </div>
 </section>
 
   
@@ -175,9 +178,7 @@ function abrirPopup() {
 }
 
 
-/* =========================
-   CONTEÚDO
-   ========================= */
+/*CONTEÚDO*/
 
 .conteudo {
     height: calc(100% - 34px);
@@ -215,9 +216,7 @@ function abrirPopup() {
 }
 
 
-/* =========================
-   PERSONAGEM
-   ========================= */
+/* */
 
 /* PERSONAGEM */
 
@@ -234,6 +233,55 @@ function abrirPopup() {
     pointer-events: none;
 }
 
+#tremor {
+    position: fixed;
+
+    left: 50%;
+    top: 50%;
+
+    width: 420px;
+    height: 200px;
+
+    transform: translate(-50%, -50%);
+
+    animation: tremorGlitch 3.5s steps(1) infinite;
+}
+
+@keyframes tremorGlitch {
+
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    15% {
+        transform: translate(calc(-50% - 5px), calc(-50% + 1px));
+    }
+
+    30% {
+        transform: translate(calc(-50% + 4px), calc(-50% - 2px));
+    }
+
+    45% {
+        transform: translate(calc(-50% - 2px), calc(-50% + 4px));
+    }
+
+    60% {
+        transform: translate(calc(-50% + 5px), calc(-50% - 3px));
+    }
+
+    75% {
+        transform: translate(calc(-50% - 4px), calc(-50% - 1px));
+    }
+
+    90% {
+        transform: translate(calc(-50% + 2px), calc(-50% + 3px));
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
 </style>
 
 `);
@@ -245,6 +293,7 @@ document.addEventListener("DOMContentLoaded", abrirPopup);
 function fecharPopup(event) {
     event.preventDefault();
     document.getElementById("backgroundBlur").remove();
+    document.body.style.overflow = "";
 }
 
 function fatalError() {
