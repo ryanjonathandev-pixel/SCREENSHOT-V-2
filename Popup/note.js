@@ -74,7 +74,7 @@ function abrirPopup() {
     overflow: visible;
     transform-origin: center;
 
-    animation: entradaGlitch 0.15s steps(1, end) 0.5 forwards;
+    animation: entradaGlitch 0.15s steps(1, end) 0.5s forwards;
 }
 
 @keyframes entradaGlitch {
