@@ -165,7 +165,6 @@ function abrirPopup() {
     position: absolute;
 
     right: 5px;
-    top: 3px;
 
     width: 28px;
     height: 28px;
