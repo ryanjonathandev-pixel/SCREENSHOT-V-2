@@ -57,8 +57,8 @@ function abrirPopup() {
 
     background: #eee0b9;
 
-    border: 3px solid #04032a;
-    border-radius: 2px;
+    border: 5px solid #0874c9;
+    border-radius: 3px;
 
     box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.45);
 
